@@ -14,7 +14,7 @@ document.body.appendChild(renderer.domElement);
 const fov = 75;
 const aspect = w / h;
 const near = 0.1;
-const far = 100;
+const far = 10000;
 
 const camera = new THREE.PerspectiveCamera(fov, aspect, near, far);
 camera.position.z = 9;
@@ -77,3 +77,16 @@ function animate(t = 0) {
 }
 
 animate();
+
+// Update scene on window resize
+function onWindowResize() {
+    // Update camera aspect ratio
+    camera.aspect = window.innerWidth / window.innerHeight;
+    camera.updateProjectionMatrix();
+  
+    // Update renderer size
+    renderer.setSize(window.innerWidth, window.innerHeight);
+  }
+  
+// Add event listener for resize
+window.addEventListener("resize", onWindowResize);
