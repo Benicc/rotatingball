@@ -12,7 +12,7 @@ function getRandomFloat(min, max) {
 
 const w=window.innerWidth;
 const h=window.innerHeight;
-const renderer = new THREE.WebGLRenderer({antialias: true});
+const renderer = new THREE.WebGLRenderer({antialias: true, preserveDrawingBuffer: true});
 renderer.setSize(w, h);
 document.body.appendChild(renderer.domElement);
 
