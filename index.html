@@ -7,6 +7,17 @@
     <style>
       body {
         margin: 0;
+        overflow: hidden; /* Prevents scrolling */
+      }
+
+      canvas {
+        display: block;         /* Prevents extra margins on the canvas */
+        position: absolute;     /* Ensures the canvas takes the full screen */
+        top: 0;                 /* Start from the top */
+        left: 0;                /* Start from the left */
+        width: 100%;            /* Make sure the canvas covers full width */
+        height: 100%;           /* Make sure the canvas covers full height */
+        touch-action: none;     /* Prevents issues with gestures like pinch-zoom */
       }
     </style>
     <script type="importmap">

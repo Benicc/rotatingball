@@ -1,11 +1,6 @@
 import * as THREE from "three"
 import { OrbitControls } from 'https://cdn.jsdelivr.net/npm/three@0.161.0/examples/jsm/controls/OrbitControls.js';
 
-if (!window.WebGLRenderingContext) {
-    alert("Your browser does not support WebGL. Please update your browser or use a different one.");
-    return;  // Stop further execution if WebGL is not supported
-}
-
 function getRandomFloat(min, max) {
     return Math.random() * (max - min) + min;
 }
