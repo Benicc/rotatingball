@@ -1,5 +1,6 @@
 import * as THREE from "three"
-import { OrbitControls } from "jsm/controls/OrbitControls.js";
+import { OrbitControls } from 'https://cdn.jsdelivr.net/npm/three@0.161.0/examples/jsm/controls/OrbitControls.js';
+
 
 function getRandomFloat(min, max) {
     return Math.random() * (max - min) + min;
@@ -22,7 +23,7 @@ const scene = new THREE.Scene();
 
 const controls = new OrbitControls(camera, renderer.domElement);
 controls.enableDamping = true;
-controls.damplingFactor = 0.01;
+controls.dampingFactor = 0.01;
 
 const geo = new THREE.TorusGeometry(3, 0.001);
 const mat = new THREE.MeshStandardMaterial({
