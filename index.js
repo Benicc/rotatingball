@@ -21,8 +21,8 @@ camera.position.z = 9;
 const scene = new THREE.Scene();
 
 const controls = new OrbitControls(camera, renderer.domElement);
-controls.enableDamping = true;
-controls.dampingFactor = 0.01;
+// controls.enableDamping = true;
+// controls.dampingFactor = 0.01;
 
 const geo = new THREE.TorusGeometry(3, 0.001);
 const mat = new THREE.MeshStandardMaterial({
