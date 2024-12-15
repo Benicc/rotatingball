@@ -70,8 +70,8 @@ function animate(t = 0) {
         mesh.rotation.x = t * getRandomFloat(0.00001, 0.001);
     });
     
-    sphereMesh.rotation.y = t * -0.0001;
-    sphereMesh.rotation.x = t * -0.0001;
+    sphereMesh.rotation.y = t * -0.001;
+    sphereMesh.rotation.x = t * -0.0007;
     renderer.render(scene, camera);
     controls.update();
 }
